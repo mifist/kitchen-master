@@ -1,0 +1,174 @@
+/*
+$breakpoint-small: 480px; // For widths more than 480px
+$breakpoint-medium: 768px; // For width more than 768px
+$breakpoint-large: 960px; // For width more than 960px
+$breakpoint-xlarge: 1220px; // For width more than 1220px
+*/
+.km-menu-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-block;
+	color: #ffffff;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 30px;
+	z-index: 999;
+}
+@media only screen and (min-width: 1220px) {
+	/*	Десктоп с большими разрешениями, телевизоры.*/
+
+}
+
+@media (min-width: 960px) {
+	.km-nav .km-menu-toggle {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 959px) {
+	/*	Планшеты в режиме landscape, нетбуки, ноутбуки, десктоп.*/
+	.km-nav h1 {
+		padding: 0;
+		margin-bottom: 40px;
+	}
+	.km-nav .km-menu,
+	.km-menu-overlay {
+		/*visibility: hidden;*/
+		position: fixed;
+		bottom: 0;
+		top: 0;
+		margin: 0;
+		height: auto;
+		-webkit-transition: -webkit-transform .4s ease-in, right .6s ease-in;
+		-moz-transition: -moz-transform .4s ease-in, right .6s ease-in;
+		transition: transform .4s ease-in, right .6s ease-in;
+	}
+	.km-nav .km-menu {
+		right: 0;
+		width: 300px;
+		z-index: 998;
+		background: #2a323a;
+		padding: 20px;
+		-webkit-transform: translateX(100%);
+		-moz-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	.km-menu-open .km-menu {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	.km-menu-open {
+		overflow: hidden;
+	}
+
+	/*.km-menu-open .km-menu,
+	.km-menu-open .km-menu-overlay {
+		visibility: visible;
+	}*/
+
+	.km-menu-open .km-menu-overlay {
+		right: 0;
+	}
+
+	.km-menu-overlay {
+		right: 100%;
+		left: 0;
+		z-index: 997;
+		background: rgba(255, 255, 255, 0.80);
+	}
+	.km-menu-open .km-menu-toggle {
+		background: #2a323a;
+	}
+	.km-nav .km-menu li:first-child {
+		margin-top: 40px;
+	}
+	.km-nav .km-menu li {
+		display: block;
+		height: 70px;
+		line-height: 70px;
+		margin-right: 0;
+	 }
+	.km-menu a{
+		line-height: 1.3;
+		height: auto;
+		padding: 0 0 20px;
+	}
+	.km-nav li a:hover {
+		color: #f39c12;
+		text-decoration: underline;
+	}
+	.km-cook .km-text-resp {
+		margin-bottom: 30px;
+	}
+	.km-cook .km-cook-margin {
+		margin-bottom: 20px;
+	}
+	.km-center-commit {
+		margin-left: 0;
+	}
+	.km-ba-width-pl, .km-ba-width-pr {
+		padding: 0;
+		margin: 0;
+	}
+	.km-footer-p-last {
+		padding-top: 65px;
+	}
+	.km-foot-border {
+		border: none;
+	}
+	.km-form .input__field--ruri {
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	.km-form .input__label--ruri {
+		width: 345px;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	.km-form button,
+	.km-form .km-footer-button {
+		display: none;
+	}
+	.km-form .input__label--ruri::after {
+		width: 345px;
+	}
+	.km-footer-center {
+		text-align: center;
+	}
+	.km-testimonials .km-comment-pad80 {
+		padding-bottom: 0;
+	}
+	.km-center-commit {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+/*	Планшеты в режиме portrait.*/
+	.km-center-commit {
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width: 480px) and (max-width: 550px) {
+
+}
+
+@media only screen and (max-width: 480px)  {
+	/*	Здесь стили более разумных, но все еще мобильных устройств. Android, iPhone  и так далее.*/
+
+	.km-center-commit {
+		margin-left: 0;
+	}
+
+}
